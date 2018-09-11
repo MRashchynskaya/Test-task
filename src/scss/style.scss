@@ -1,0 +1,122 @@
+$bg-color: #F7F7F7;
+$font-color: #000000;
+$primary-color: #A981CC;
+$icon-size: 17.5px;
+$main-font-family: 'Roboto', sans-serif;
+
+@import "_grid";
+@import "_reset";
+@import "input-button";
+@import "card";
+@import "modal";
+
+/* fonts */
+
+@font-face {
+    font-family: Avenir-next-demi;
+    src: url(../fonts/avenir-next-demi.woff2) format("woff2");
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir-next-bold;
+    src: url(../fonts/avenir-next-bold.woff2) format("woff2");
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir-next-regular;
+    src: url(../fonts/avenir-next-regular.woff2) format("woff2");
+
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* main styles */
+
+body {
+    background: $bg-color;
+    color: $font-color;
+    font-family: $main-font-family;
+}
+
+main {
+    padding: 40px 0 60px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+    &__search-input {
+        order: 1;
+        width: 100%;
+    }
+    &__search-input-label {
+        order: 1;
+        width: 100%;
+        position: relative;
+    }
+
+    &__btn--add-card {
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.page-title {
+    font-size: 32px;
+    font-family: Avenir-next-demi;
+    color: #484848;
+    font-weight: 500;
+}
+
+.pagination-list {
+    display: flex;
+    align-items: flex-start;
+    &__item {
+        padding: 9px 13px;
+        background-color: #EEE4F0;
+        font-size: 14px;
+        font-family: Avenir-next-regular;
+        color: #3C3C3C;
+        font-weight: 400;
+        box-shadow: 0px 1px 1px lighten(#000000, 84%);
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &--active {
+            background-color: #FFFFFF;
+        }
+    }
+}
+
+@media (min-width: $tablet-screen) {
+    .nav {
+        &__search-input {
+            background: transparent;
+            margin-left: auto;
+        }
+
+        &__search-input-label {
+            order: 0;
+            margin-left: auto;
+            width: 328px;
+        }
+
+        &__btn--add-card {
+            margin-left: 24px;
+        }
+    }
+    .container .pagination-list {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+    }
+}

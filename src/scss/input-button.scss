@@ -1,0 +1,94 @@
+.btn {
+    transition: all .2s ease-in;
+}
+
+.nav {
+    &__search-input {
+        padding-left: 40px;
+        border: none;
+        font-size: 16px;
+        font-family: inherit;
+        height: 37px;
+        border-bottom: 2px solid lighten(#000000, 68%);
+        opacity: .32;
+        color: #000000;
+        position: relative;
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        -ms-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        &:hover {
+            opacity: .5;
+            border-bottom: 2px solid lighten(#000000, 44%);
+        }
+
+        &:focus {
+            border-bottom: 2px solid #A981CC;
+            opacity: 1;
+        }
+
+    }
+
+    &__search-input-label::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: 13px;
+        width: 18px;
+        height: 18px;
+        background: url(../img/search.svg) no-repeat;
+        opacity: .20;
+    }
+
+    &__btn-add-card {
+        margin-left: auto;
+    }
+
+    &__btn {
+        color: #FFFFFF;
+        background-color: #A981CC;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -ms-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+
+        &:hover {
+            background-color: #9874B8;
+            box-shadow: 0px 2px 8px lighten(#000000, 76%);
+        }
+
+        &:focus {
+            background-color: #8767A3;
+            box-shadow: 0px 2px 8px lighten(#000000, 69%);
+        }
+
+        &:active {
+            background-color: #8767A3;
+            box-shadow: none;
+        }
+
+        &--add-card {
+            position: relative;
+            padding: 10px 16px 10px 34px;
+            &::before {
+                content: "+";
+                position: absolute;
+                top: 9px;
+                left: 16px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1;
+            }
+        }
+    }
+}
