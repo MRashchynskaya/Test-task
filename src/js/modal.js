@@ -7,11 +7,17 @@ function cardToDelete() {
 }
 
 function showModal() {
-    // cardToDelete();
     modal.removeAttribute('hidden');
+    $('body').css({ 'overflow-y': "hidden" });
+}
+
+function closeModal() {
+    modal.setAttribute("hidden", "hidden");
+    $('body').css({ 'overflow-y': "scroll" });
 }
 
 let btn = document.querySelectorAll(".products__card-delete");
+let btnCloseModal = document.querySelector(".close-modal");
 
 function bindEvent () {
     for (let i = 0; i < btn.length; i++) {
@@ -24,6 +30,7 @@ bindEvent ();
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.setAttribute("hidden", "hidden");
+        $('body').css({ 'overflow-y': "scroll" });
     }
 };
 
@@ -32,6 +39,7 @@ var btnDel = document.querySelector(".btn-del");
 var productsList = document.querySelector(".products__card-wrap");
 
 btnDel.addEventListener('click', deleteCard);
+btnCloseModal.addEventListener('click', closeModal);
 
 function deleteCard () {
     productsList.removeChild(currentCard);

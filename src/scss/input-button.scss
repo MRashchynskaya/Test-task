@@ -1,5 +1,12 @@
 .btn {
     transition: all .2s ease-in;
+    border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .nav {
@@ -90,5 +97,33 @@
                 line-height: 1;
             }
         }
+    }
+}
+
+.btn-decline {
+    background-color: transparent;
+    color: #C4AFC9;
+    text-transform: uppercase;
+    padding: 10px 16px 10px 16px;
+}
+
+.btn-del {
+    background-color: #A981CC;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 16px 10px 16px;
+    &:hover {
+        background-color: #9874B8;
+        box-shadow: 0px 2px 8px lighten(#000000, 76%);
+    }
+
+    &:focus {
+        background-color: #8767A3;
+        box-shadow: 0px 2px 8px lighten(#000000, 69%);
+    }
+
+    &:active {
+        background-color: #8767A3;
+        box-shadow: none;
     }
 }

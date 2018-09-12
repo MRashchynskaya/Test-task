@@ -1,5 +1,12 @@
 .btn {
-  transition: all .2s ease-in; }
+  transition: all .2s ease-in;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500; }
 
 .nav__search-input {
   padding-left: 40px;
@@ -72,3 +79,24 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 1; }
+
+.btn-decline {
+  background-color: transparent;
+  color: #C4AFC9;
+  text-transform: uppercase;
+  padding: 10px 16px 10px 16px; }
+
+.btn-del {
+  background-color: #A981CC;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px 16px 10px 16px; }
+  .btn-del:hover {
+    background-color: #9874B8;
+    box-shadow: 0px 2px 8px #c2c2c2; }
+  .btn-del:focus {
+    background-color: #8767A3;
+    box-shadow: 0px 2px 8px #b0b0b0; }
+  .btn-del:active {
+    background-color: #8767A3;
+    box-shadow: none; }

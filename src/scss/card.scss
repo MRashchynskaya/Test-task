@@ -6,7 +6,7 @@ $bg-card: #FFFFFF;
         position: relative;
 
         // width: 324px;
-        height: 388px;
+        min-height: 388px;
         box-shadow: 0px 0px 3px lighten(#000000, 87%);
         font-weight: 400;
         transition: all .3s ease-in;
@@ -37,45 +37,45 @@ $bg-card: #FFFFFF;
             opacity: 0;
         }
 
-        &[data-company-name="1"] {
-            .products__card-company-logo {
-                background-color: #697996;
-            }
+        // &[data-company-name="1"] {
+        //     .products__card-company-logo {
+        //         background-color: #697996;
+        //     }
 
-            &-img {
-                background-color: #697996;
-            }
-        }
+        //     &-img {
+        //         background-color: #697996;
+        //     }
+        // }
 
-        &[data-company-name="2"] {
-            .products__card-company-logo {
-                background-color: #8E6996;
-            }
+        // &[data-company-name="2"] {
+        //     .products__card-company-logo {
+        //         background-color: #8E6996;
+        //     }
 
-            .products__card-img {
-                background-color: #9354A0;
-            }
-        }
+        //     .products__card-img {
+        //         background-color: #9354A0;
+        //     }
+        // }
 
-        &[data-company-name="3"] {
-            .products__card-company-logo {
-                background-color: #D8C08A;
-            }
+        // &[data-company-name="3"] {
+        //     .products__card-company-logo {
+        //         background-color: #D8C08A;
+        //     }
 
-            .products__card-img {
-                background-color: #D8C08A;
-            }
-        }
+        //     .products__card-img {
+        //         background-color: #D8C08A;
+        //     }
+        // }
 
-        &[data-company-name="4"] {
-            .products__card-company-logo {
-                background-color: #9EC4C3;
-            }
+        // &[data-company-name="4"] {
+        //     .products__card-company-logo {
+        //         background-color: #9EC4C3;
+        //     }
 
-            .products__card-img {
-                background-color: #9EC4C3;
-            }
-        }
+        //     .products__card-img {
+        //         background-color: #9EC4C3;
+        //     }
+        // }
     }
 
     &__card-title a {
@@ -102,7 +102,8 @@ $bg-card: #FFFFFF;
     &__card-company-logo {
         height: 40px;
         width: 40px;
-        background-color: #697996;
+        background-color: #fff;
+        border: 1px solid lighten(#000000, 87%);
         display: block;
         border-radius: 50%;
         -webkit-border-radius: 50%;
@@ -111,14 +112,8 @@ $bg-card: #FFFFFF;
         -o-border-radius: 50%;
     }
 
-    // &[data-company-name="4"] {
-    //     &__card-company-logo {
-    //         background-color: #9EC4C3;
-    //     }
-    // }
-
     &__card-img {
-        height: 192px;
+        // height: 192px;
         width: 100%;
         object-fit: cover;
         background-color: #697996;
